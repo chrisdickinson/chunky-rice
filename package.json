@@ -1,0 +1,28 @@
+{
+  "name": "chunky-rice",
+  "version": "0.0.1",
+  "description": "decode binary streams into PNG chunk objects and back into binary",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "buffer-crc32": "~0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdickinson/chunky-rice.git"
+  },
+  "keywords": [
+    "PNG",
+    "chunk",
+    "stream",
+    "through"
+  ],
+  "author": "Chris Dickinson <chris@neversaw.us>",
+  "license": "MIT"
+}
