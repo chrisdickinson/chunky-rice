@@ -20,7 +20,7 @@ function text(key, data) {
     , buffer = new Buffer(keylen + 1 + Buffer.byteLength(data))
 
   buffer.write(key, 0, keylen)
-  buffer[keylen + 1] = 0
+  buffer[keylen] = 0
   buffer.write(data, keylen + 1)
 
   return make_chunk('tEXt', buffer)
