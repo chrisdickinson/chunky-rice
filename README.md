@@ -38,6 +38,14 @@ and also, loves you unconditionally.
 
 ---
 
+## Installation
+
+```bash
+$ npm install chunky-rice
+```
+
+---
+
 ## API
 
 ### rice = require('chunky-rice')
