@@ -1,3 +1,6 @@
+// included from https://github.com/beatgammit/crc32 @ 12862321cb1fa816aa08ac41bf11578656b23bc0
+// licensed MIT
+
 (function () {
 	'use strict';
 
