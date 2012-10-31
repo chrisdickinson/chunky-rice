@@ -104,26 +104,17 @@ Automatically calls `decoder.pause()` on its source stream, and `decoder.resume(
 the ready callback has been called.
 
 ```javascript
-    var zlib = require('zlib')
 
     fs.createReadStream('thing.png')
       .pipe(rice.decoder())
         .on('data', function(chunk) {
-          if(chunk.type() !== 'IDAT')
+          if(chunk.type() !== 'tEXt')
             return
 
           chunk.modify(function(ready) {
-            zlib.inflate(chunk.data, function(err, data) {
-              if(err) return ready(err)
-
-              data[0] = 1000
-              zlib.deflate(data, function(err, data) {
-                if(err) return ready(err)
-
-                // ready accepts (error, Buffer data)
-                ready(null, data)            
-              })
-            })    
+            setTimeout(function() {
+              ready(null, new Buffer("hello\x00world"))
+            }, 100)
           })
         })
     .pipe(rice.encoder())
