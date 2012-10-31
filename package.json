@@ -1,6 +1,6 @@
 {
   "name": "chunky-rice",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "decode binary streams into PNG chunk objects and back into binary",
   "main": "index.js",
   "directories": {
